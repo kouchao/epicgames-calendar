@@ -100,7 +100,7 @@ const nowRes = await fetch('https://f.m.suning.com/api/ct.do')
 
 if (nowRes.ok) {
   const data = await nowRes.json()
-  now = dayjs(data.currentTime).format('YYYY-MM-DD HH:mm:ss')
+  now = data.currentTime
 }
 
 const html = `<!DOCTYPE html>
@@ -115,6 +115,13 @@ const html = `<!DOCTYPE html>
 <h2>上次更新时间：<span class="time">${now}</span></h2>
 ${logText}
 <p>订阅地址：https://raw.githubusercontent.com/kouchao/epicgames-calendar/gh-pages/event.ics</p>
+
+<script src="https://unpkg.com/dayjs@1.11.5/dayjs.min.js"></script>
+<script>
+const el = document.querySelector('.time')
+const time = Number(el.innerHTML)
+el.innerHTML = dayjs(time).format('YYYY-MM-DD HH:mm:ss')
+</script>
 </body>
 </html>`
 
