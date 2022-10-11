@@ -1,6 +1,11 @@
 import dayjs from 'dayjs'
 import ics from 'ics'
-import { writeFileSync } from 'fs'
+import { writeFileSync, existsSync, mkdirSync } from 'fs'
+
+const dir = 'public'
+if (!existsSync(dir)) {
+  mkdirSync(dir)
+}
 
 const events = []
 let logText = ''
@@ -105,4 +110,4 @@ ${logText}
 </body>
 </html>`
 
-writeFileSync(`./index.html`, html)
+writeFileSync(`./${dir}/index.html`, html)
