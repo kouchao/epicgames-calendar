@@ -93,7 +93,7 @@ ics.createEvents(events, (error, value) => {
     return
   }
 
-  writeFileSync(`./event.ics`, value)
+  writeFileSync(`./${dir}/event.ics`, value)
 })
 
 const html = `<!DOCTYPE html>
@@ -107,6 +107,7 @@ const html = `<!DOCTYPE html>
 <body>
 <h2>上次更新时间：${dayjs().format('YYYY-MM-DD HH:MM:ss')}</h2>
 ${logText}
+<p>订阅地址：https://raw.githubusercontent.com/kouchao/epicgames-calendar/gh-pages/event.ics</p>
 </body>
 </html>`
 
