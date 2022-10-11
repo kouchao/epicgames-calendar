@@ -86,7 +86,6 @@ if (res.ok) {
 }
 
 //  事件
-
 ics.createEvents(events, (error, value) => {
   if (error) {
     console.log(error)
@@ -95,6 +94,14 @@ ics.createEvents(events, (error, value) => {
 
   writeFileSync(`./${dir}/event.ics`, value)
 })
+
+let now
+const nowRes = await fetch('https://f.m.suning.com/api/ct.do')
+
+if (nowRes.ok) {
+  const data = await nowRes.json()
+  now = dayjs(data.currentTime).format('YYYY-MM-DD HH:mm:ss')
+}
 
 const html = `<!DOCTYPE html>
 <html lang="en">
@@ -105,7 +112,7 @@ const html = `<!DOCTYPE html>
   <title>epicgames calendar</title>
 </head>
 <body>
-<h2>上次更新时间：${dayjs().format('YYYY-MM-DD HH:MM:ss')}</h2>
+<h2>上次更新时间：<span class="time">${now}</span></h2>
 ${logText}
 <p>订阅地址：https://raw.githubusercontent.com/kouchao/epicgames-calendar/gh-pages/event.ics</p>
 </body>
