@@ -1,6 +1,9 @@
 name: Update
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: "0 8 * * *" # 北京时间每日 0 点
   workflow_dispatch:
