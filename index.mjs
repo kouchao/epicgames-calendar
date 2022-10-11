@@ -3,6 +3,7 @@ import ics from 'ics'
 import { writeFileSync } from 'fs'
 
 const events = []
+let logText = ''
 
 const time = (date) => dayjs(date).format('YYYY-MM-DD HH:MM')
 const eventTime = (date) =>
@@ -16,24 +17,29 @@ const eventTime = (date) =>
 
 const log = (o, index) => {
   let q
+  let subTitle = '正在进行'
   if (o?.promotions?.promotionalOffers?.length) {
     q = o.promotions.promotionalOffers[0].promotionalOffers[0]
   } else {
+    subTitle = '即将开始'
     q = o.promotions.upcomingPromotionalOffers[0].promotionalOffers[0]
   }
 
-  console.log(
-    `${index + 1}. 即将开始：${o.title}【${o.price.totalPrice.currencyCode} ${
-      o.price.totalPrice.originalPrice / 100
-    }】 ${time(q?.startDate)} ~ ${time(q?.endDate)}`
-  )
+  const info = `${index + 1}. ${subTitle}：${o.title}【${
+    o.price.totalPrice.currencyCode
+  } ${o.price.totalPrice.originalPrice / 100}】 ${time(q?.startDate)} ~ ${time(
+    q?.endDate
+  )}`
+
+  logText += `<p><a title="${o.title}" href="https://store.epicgames.com/zh-CN/p/${o.catalogNs.mappings[0].pageSlug}" target="_blank">${info}</a></p>\n`
+  console.log(info)
 }
 
 const createEvent = (o) => {
   const event = {
     productId: 'kouchao/epicgames',
     uid: o.catalogNs.mappings[0].pageSlug,
-    lastModified: eventTime(new Date()),
+    lastModified: eventTime(),
     title: o.title,
     description: `${o.description}
 原价：${o.price.totalPrice.currencyCode} ${
@@ -84,3 +90,19 @@ ics.createEvents(events, (error, value) => {
 
   writeFileSync(`./event.ics`, value)
 })
+
+const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>epicgames calendar</title>
+</head>
+<body>
+<h2>上次更新时间：${dayjs().format('YYYY-MM-DD HH:MM:ss')}</h2>
+${logText}
+</body>
+</html>`
+
+writeFileSync(`./index.html`, html)
