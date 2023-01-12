@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>epicgames calendar</title>
+</head>
+<body>
+<h2>上次更新时间：<span class="time">1673512000648</span></h2>
+<p><a title="Gamedec" href="https://store.epicgames.com/zh-CN/p/gamedec" target="_blank">1. 即将开始：Gamedec【CNY 148】 2023-01-12 16:01 ~ 2023-01-19 16:01</a></p>
+<p><a title="《Shadow Tactics - Aiko's Choice》" href="https://store.epicgames.com/zh-CN/p/shadow-tactics-aikos-choice-5678c1" target="_blank">2. 正在进行：《Shadow Tactics - Aiko's Choice》【CNY 69】 2023-01-05 16:01 ~ 2023-01-12 16:01</a></p>
+<p><a title="《First Class Trouble》" href="https://store.epicgames.com/zh-CN/p/first-class-trouble" target="_blank">3. 即将开始：《First Class Trouble》【CNY 48】 2023-01-12 16:01 ~ 2023-01-19 16:01</a></p>
+<p><a title="Kerbal Space Program" href="https://store.epicgames.com/zh-CN/p/kerbal-space-program" target="_blank">4. 正在进行：Kerbal Space Program【CNY 112】 2023-01-05 16:01 ~ 2023-01-12 16:01</a></p>
+
+<p>订阅地址：https://raw.githubusercontent.com/kouchao/epicgames-calendar/gh-pages/event.ics</p>
+
+<script src="https://unpkg.com/dayjs@1.11.5/dayjs.min.js"></script>
+<script>
+const el = document.querySelector('.time')
+const time = Number(el.innerHTML)
+el.innerHTML = dayjs(time).format('YYYY-MM-DD HH:mm:ss')
+</script>
+</body>
+</html>
