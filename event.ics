@@ -1,0 +1,69 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:kouchao/epicgames
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:islets-5f2670
+SUMMARY:Islets
+DTSTAMP:20240328T082000Z
+DTSTART:20240328T150300Z
+DTEND:20240404T150400Z
+DESCRIPTION:在这个题材包罗万象的银河城游戏中，飞上天空，重新连结破碎的世界！帮助伊科在精美的手绘小岛上穿行历险，从各色古怪角色那里收获信件
+	，还有面对强大而可怕的对手。\n原价：CNY 76\n发行商：Armor Games Studios
+URL:https://store.epicgames.com/zh-CN/p/islets-5f2670
+STATUS:TENTATIVE
+LAST-MODIFIED:20240328T080300Z
+END:VEVENT
+BEGIN:VEVENT
+UID:call-of-the-wild-the-angler
+SUMMARY:《Call of the Wild: The Angler™》
+DTSTAMP:20240328T082000Z
+DTSTART:20240321T150300Z
+DTEND:20240328T150300Z
+DESCRIPTION:《猎人：荒野的召唤》游戏的创作者们带来了身临其境的颠覆性钓鱼体验！探索辽阔的开放世界，找寻绝佳的钓鱼地点。单人游戏或与好友一起
+	，尽享在开放水域钓鱼的乐趣。赶快出发，踏上钓鱼大师的成长旅途。\n原价：CNY 109\n发行商：Expansive Worlds AB
+URL:https://store.epicgames.com/zh-CN/p/call-of-the-wild-the-angler
+LAST-MODIFIED:20240328T080300Z
+END:VEVENT
+BEGIN:VEVENT
+UID:the-outer-worlds-spacers-choice-edition
+SUMMARY:《The Outer Worlds》Spacer’s Choice Edition
+DTSTAMP:20240328T082000Z
+DTSTART:20240314T150300Z
+DTEND:20240328T150300Z
+DESCRIPTION:《The Outer Worlds》Spacer’s Choice Edition 是游玩这款由 Obsidian Enter
+	tainment 和 Private Division 开发的备获大奖的角色扮演游戏的最佳方式。该版本中包含基础游戏以及全部 DLC，并已全面重制，
+	是《The Outer Worlds》最终、最棒的版本。\n原价：CNY 199\n发行商：Private Division
+URL:https://store.epicgames.com/zh-CN/p/the-outer-worlds-spacers-choice-edi
+	tion
+LAST-MODIFIED:20240328T080300Z
+END:VEVENT
+BEGIN:VEVENT
+UID:atom-eve-ff090d
+SUMMARY:Invincible Presents: Atom Eve
+DTSTAMP:20240328T082000Z
+DTSTART:20240321T150300Z
+DTEND:20240328T150300Z
+DESCRIPTION:Become Atom Eve and take control of your own path as one of the
+	 most powerful superheroes in the Invincible universe! Unravel a mystery a
+	nd balance the dangers and responsibilities of being a superhero with the 
+	relatable challenges of everyday life.\n原价：CNY 32\n发行商：Skybound Game Studi
+	os\, Inc.
+URL:https://store.epicgames.com/zh-CN/p/atom-eve-ff090d
+LAST-MODIFIED:20240328T080300Z
+END:VEVENT
+BEGIN:VEVENT
+UID:lost-castle-abb2e2
+SUMMARY:失落城堡: 遗迹守护者
+DTSTAMP:20240328T082000Z
+DTSTART:20240411T150400Z
+DTEND:20240425T150400Z
+DESCRIPTION:“遗迹的守护者” DLC中包含了两张全新的地图等你来挑战！\n原价：CNY 12\n发行商：Another Indie Stu
+	dio Limited
+URL:https://store.epicgames.com/zh-CN/p/lost-castle-abb2e2
+STATUS:TENTATIVE
+LAST-MODIFIED:20240328T080300Z
+END:VEVENT
+END:VCALENDAR

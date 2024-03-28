@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>epicgames calendar</title>
+</head>
+<body>
+<h2>上次更新时间：<span class="time">1711614059624</span></h2>
+<p><a title="Islets" href="https://store.epicgames.com/zh-CN/p/islets-5f2670" target="_blank">1. 即将开始：Islets【CNY 76】 2024-03-28 15:03 ~ 2024-04-04 15:04</a></p>
+<p><a title="《Call of the Wild: The Angler™》" href="https://store.epicgames.com/zh-CN/p/call-of-the-wild-the-angler" target="_blank">2. 正在进行：《Call of the Wild: The Angler™》【CNY 109】 2024-03-21 15:03 ~ 2024-03-28 15:03</a></p>
+<p><a title="《The Outer Worlds》Spacer’s Choice Edition" href="https://store.epicgames.com/zh-CN/p/the-outer-worlds-spacers-choice-edition" target="_blank">3. 正在进行：《The Outer Worlds》Spacer’s Choice Edition【CNY 199】 2024-03-14 15:03 ~ 2024-03-28 15:03</a></p>
+<p><a title="Invincible Presents: Atom Eve" href="https://store.epicgames.com/zh-CN/p/atom-eve-ff090d" target="_blank">4. 正在进行：Invincible Presents: Atom Eve【CNY 32】 2024-03-21 15:03 ~ 2024-03-28 15:03</a></p>
+<p><a title="失落城堡: 遗迹守护者" href="https://store.epicgames.com/zh-CN/p/lost-castle-abb2e2" target="_blank">5. 即将开始：失落城堡: 遗迹守护者【CNY 12】 2024-04-11 15:04 ~ 2024-04-25 15:04</a></p>
+
+<p>订阅地址：https://raw.githubusercontent.com/kouchao/epicgames-calendar/gh-pages/event.ics</p>
+
+<script src="https://unpkg.com/dayjs@1.11.5/dayjs.min.js"></script>
+<script>
+const el = document.querySelector('.time')
+const time = Number(el.innerHTML)
+el.innerHTML = dayjs(time).format('YYYY-MM-DD HH:mm:ss')
+</script>
+</body>
+</html>
